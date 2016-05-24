@@ -1,0 +1,16 @@
+13:45:29.666 INFO  - Processing command line option -hwspec C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS\SDK\SDK_Export\hw\system.xml. 
+13:46:23.474 INFO  - Saving repository preferences. 
+13:46:23.484 INFO  - Reading in cores from local repositories: 
+		 C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS 
+13:46:23.574 INFO  - Updating libgen.options on all BSP projects. 
+13:46:23.574 INFO  - Cleaning BSP projects in the workspace. 
+15:25:06.142 INFO  - FPGA configured successfully with bitstream "C:/Users/Engin/Desktop/bitirme_git/Adder_SDK/MicroBlaze_XPS_hw_platform/download.bit" 
+15:25:47.678 INFO  - Successfully generated C:\Users\Engin\Desktop\bitirme_git\Adder_SDK\Interrupt_test\src\lscript.ld. 
+15:25:47.688 INFO  - Applying linker script to all configurations of project Interrupt_test. 
+15:25:47.698 INFO  - Setting rebuild state to true for all configurations of project Interrupt_test. 
+15:40:56.182 INFO  - Successfully generated C:\Users\Engin\Desktop\bitirme_git\Adder_SDK\Interrupt_test\src\lscript.ld. 
+15:40:56.182 INFO  - Applying linker script to all configurations of project Interrupt_test. 
+15:40:56.182 INFO  - Setting rebuild state to true for all configurations of project Interrupt_test. 
+15:42:08.328 INFO  - Successfully generated C:\Users\Engin\Desktop\bitirme_git\Adder_SDK\Interrupt_test\src\lscript.ld. 
+15:42:08.328 INFO  - Applying linker script to all configurations of project Interrupt_test. 
+15:42:08.328 INFO  - Setting rebuild state to true for all configurations of project Interrupt_test. 

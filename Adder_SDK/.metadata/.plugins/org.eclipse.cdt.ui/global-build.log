@@ -1,0 +1,675 @@
+13:47:00 **** Build of project standalone_bsp_1 ****
+make -k all 
+libgen -hw ../MicroBlaze_XPS_hw_platform/system.xml\
+	       -lp ../../MicroBlaze_XPS\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../MicroBlaze_XPS_hw_platform/system.xml -lp
+../../MicroBlaze_XPS -pe microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling uartlite"
+"Compiling bram"
+"Compiling spi"
+"Compiling serial_adder_8_bit"
+serial_adder_8_bit_selftest.c: In function 'SERIAL_ADDER_8_BIT_SelfTest':
+serial_adder_8_bit_selftest.c:70:50: error: 'SERIAL_ADDER_8_BIT_USER_NUM_REG' undeclared (first use in this function)
+serial_adder_8_bit_selftest.c:70:50: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [libs] Hata 1
+"Compiling cpu"
+ERROR:EDK:369 -  make failed for target "libs" 
+ERROR:EDK:3418 - Error(s) while running make.
+make: *** [microblaze_0/lib/libxil.a] Hata 2
+make: Hedef `all' hatalardan dolayý yeniden derlenemez.
+13:48:25 **** Auto Build of project standalone_bsp_1 ****
+make -k all 
+libgen -hw ../MicroBlaze_XPS_hw_platform/system.xml\
+	       -lp ../../MicroBlaze_XPS\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../MicroBlaze_XPS_hw_platform/system.xml -lp
+../../MicroBlaze_XPS -pe microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling intc"
+"Compiling tmrctr"
+"Compiling uartlite"
+"Compiling bram"
+"Compiling spi"
+"Compiling serial_adder_8_bit"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+13:49:24 **** Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    316	   2084	   4830	   12de	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+13:50:12 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    316	   2084	   4830	   12de	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:04:12 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:26: fatal error: serial_adder.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Hata 1
+15:04:31 **** Clean-only build of configuration Debug for project Interrupt_test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  Interrupt_test.elf.size  Interrupt_test.elf.elfcheck  Interrupt_test.elf
+' '
+15:04:32 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c:36:26: fatal error: serial_adder.h: No such file or directory
+compilation terminated.
+make: *** [src/interrupt_test.o] Hata 1
+15:13:23 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c:36:26: fatal error: serial_adder.h: No such file or directory
+compilation terminated.
+make: *** [src/interrupt_test.o] Hata 1
+15:15:35 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c:36:26: fatal error: serial_adder.h: No such file or directory
+compilation terminated.
+make: *** [src/interrupt_test.o] Hata 1
+15:16:01 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7778	    324	   2250	  10352	   2870	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:25:08 **** Auto Build of project standalone_bsp_1 ****
+make -k all 
+'Finished building libraries'
+15:25:48 **** Clean-only build of configuration Debug for project Interrupt_test ****
+make clean 
+rm -rf  ./src/interrupt_test.o ./src/platform.o  ./src/interrupt_test.d ./src/platform.d  Interrupt_test.elf.size  Interrupt_test.elf.elfcheck  Interrupt_test.elf
+' '
+15:25:48 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7778	    324	   2250	  10352	   2870	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:26:01 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:26:37 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:27:05 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7766	    324	   2244	  10334	   285e	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:27:49 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:28:30 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:29:47 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c: In function 'DeviceDriverHandler':
+../src/interrupt_test.c:150:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/interrupt_test.c:150:2: note: use option -std=c99 or -std=gnu99 to compile your code
+make: *** [src/interrupt_test.o] Hata 1
+15:30:09 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7818	    324	   2250	  10392	   2898	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:30:27 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:33:08 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c: In function 'DeviceDriverHandler':
+../src/interrupt_test.c:150:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7782	    324	   2244	  10350	   286e	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:33:20 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:33:33 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7778	    324	   2250	  10352	   2870	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:33:43 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:33:57 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7818	    324	   2250	  10392	   2898	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:34:23 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:34:38 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:34:51 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c: In function 'DeviceDriverHandler':
+../src/interrupt_test.c:150:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7782	    324	   2244	  10350	   286e	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:35:02 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:35:16 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:40:16 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:40:56 **** Clean-only build of configuration Debug for project Interrupt_test ****
+make clean 
+rm -rf  ./src/interrupt_test.o ./src/platform.o  ./src/interrupt_test.d ./src/platform.d  Interrupt_test.elf.size  Interrupt_test.elf.elfcheck  Interrupt_test.elf
+' '
+15:40:56 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c: In function 'DeviceDriverHandler':
+../src/interrupt_test.c:150:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+e:/xilinx_edk/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: Interrupt_test.elf section `.bss' will not fit in region `microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl'
+e:/xilinx_edk/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl' overflowed by 2208 bytes
+collect2: ld returned 1 exit status
+make: *** [Interrupt_test.elf] Hata 1
+15:42:08 **** Clean-only build of configuration Debug for project Interrupt_test ****
+make clean 
+rm -rf  ./src/interrupt_test.o ./src/platform.o  ./src/interrupt_test.d ./src/platform.d  Interrupt_test.elf.size  Interrupt_test.elf.elfcheck  Interrupt_test.elf
+' '
+15:42:08 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c: In function 'DeviceDriverHandler':
+../src/interrupt_test.c:150:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7782	    324	   2244	  10350	   286e	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:42:32 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:42:42 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+../src/interrupt_test.c: In function 'DeviceDriverHandler':
+../src/interrupt_test.c:150:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7782	    324	   2244	  10350	   286e	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:42:57 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:43:12 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7778	    324	   2250	  10352	   2870	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:43:22 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.
+15:43:36 **** Auto Build of configuration Debug for project Interrupt_test ****
+make all 
+'Building file: ../src/interrupt_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt_test.d" -MT"src/interrupt_test.d" -o "src/interrupt_test.o" "../src/interrupt_test.c"
+'Finished building: ../src/interrupt_test.c'
+' '
+'Building target: Interrupt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Interrupt_test.elf"  ./src/interrupt_test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Interrupt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Interrupt_test.elf  |tee "Interrupt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7766	    324	   2244	  10334	   285e	Interrupt_test.elf
+'Finished building: Interrupt_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Interrupt_test.elf -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe microblaze_0  |tee "Interrupt_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../MicroBlaze_XPS_hw_platform/system.xml -pe
+microblaze_0 Interrupt_test.elf 
+
+ELF file	: Interrupt_test.elf
+elfcheck passed.
+'Finished building: Interrupt_test.elf.elfcheck'
+' '
+15:43:48 **** Incremental Build of configuration Debug for project Interrupt_test ****
+make all 
+make: `all' için hiçbir þey yapýlmadý.

@@ -161,8 +161,8 @@ reg reg_interrupt;
           4'b1000 :
             for ( byte_index = 0; byte_index <= (C_SLV_DWIDTH/8)-1; byte_index = byte_index+1 )
               if ( Bus2IP_BE[byte_index] == 1 ) begin
-					if (byte_index == 1) begin
-								reg_interrupt <= Bus2IP_Data[8];
+					if (byte_index == 0) begin
+								reg_interrupt <= Bus2IP_Data[0];
 							end
 							else begin
 								slv_reg0[(byte_index*8) +: 8] <= Bus2IP_Data[(byte_index*8) +: 8];
