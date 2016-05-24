@@ -75,7 +75,9 @@ implementation/system_axi4lite_0_wrapper.ngc \
 implementation/system_axi4_0_wrapper.ngc \
 implementation/system_rs232_uart_1_wrapper.ngc \
 implementation/system_qspi_flash_wrapper.ngc \
-implementation/system_mcb_ddr2_wrapper.ngc
+implementation/system_mcb_ddr2_wrapper.ngc \
+implementation/system_axi_timer_0_wrapper.ngc \
+implementation/system_axi_intc_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 
