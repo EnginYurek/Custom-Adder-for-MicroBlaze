@@ -1,0 +1,13 @@
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.bss=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.data=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.rodata=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.sbss=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.sbss2=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.sdata=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.sdata2=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:.text=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:Heap=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:Heap-size=1024
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:Stack=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.Interrupt_test\:Stack-size=1024
+eclipse.preferences.version=1

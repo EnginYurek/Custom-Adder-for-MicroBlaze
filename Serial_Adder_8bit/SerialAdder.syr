@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: SerialAdder.prj
 
@@ -104,7 +104,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "SerialAdder.v" in library work
+Compiling verilog file "../MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/verilog/SerialAdder.v" in library work
 Module <SerialAdder> compiled
 Module <FA> compiled
 No errors in compilation
@@ -136,14 +136,14 @@ Module <FA> is correct for synthesis.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <FA>.
-    Related source file is "SerialAdder.v".
+    Related source file is "../MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/verilog/SerialAdder.v".
     Found 1-bit xor2 for signal <s>.
     Found 1-bit xor2 for signal <W<1>>.
 Unit <FA> synthesized.
 
 
 Synthesizing Unit <SerialAdder>.
-    Related source file is "SerialAdder.v".
+    Related source file is "../MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/verilog/SerialAdder.v".
     Using one-hot encoding for signal <$old_state_1>.
     Using one-hot encoding for signal <$old_state_7>.
     Found 8-bit register for signal <aHold>.
@@ -235,9 +235,9 @@ Design Statistics
 
 Cell Usage :
 # BELS                             : 110
-#      LUT2                        : 4
+#      LUT2                        : 3
 #      LUT2_L                      : 14
-#      LUT3                        : 3
+#      LUT3                        : 4
 #      LUT3_D                      : 1
 #      LUT3_L                      : 22
 #      LUT4                        : 62
@@ -312,7 +312,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 5.440ns (frequency: 183.834MHz)
-  Total number of paths / destination ports: 807 / 79
+  Total number of paths / destination ports: 808 / 79
 -------------------------------------------------------------------------
 Delay:               5.440ns (Levels of Logic = 3)
   Source:            state_5 (FF)
@@ -377,8 +377,8 @@ Offset:              4.063ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 18.45 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.42 secs
  
 --> 
 

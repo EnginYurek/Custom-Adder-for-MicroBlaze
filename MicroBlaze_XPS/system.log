@@ -3715,3 +3715,53 @@ Xilinx Software Development Kit
 Xilinx EDK 14.7 Build EDK_P.20131013
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Done!
+Deleting Internal port serial_adder_8_bit_0:Interrupt 
+serial_adder_8_bit_0 has been deleted from the project
+
+********************************************************************************
+At Local date and time: Tue May 24 17:31:52 2016
+ make -f system.make clean started...
+rm -f implementation/system.ngc
+rm -f implementation/system_proc_sys_reset_0_wrapper.ngc implementation/system_microblaze_0_ilmb_wrapper.ngc implementation/system_microblaze_0_i_bram_ctrl_wrapper.ngc implementation/system_microblaze_0_dlmb_wrapper.ngc implementation/system_microblaze_0_d_bram_ctrl_wrapper.ngc implementation/system_microblaze_0_bram_block_wrapper.ngc implementation/system_microblaze_0_wrapper.ngc implementation/system_debug_module_wrapper.ngc implementation/system_clock_generator_0_wrapper.ngc implementation/system_axi4lite_0_wrapper.ngc implementation/system_axi4_0_wrapper.ngc implementation/system_rs232_uart_1_wrapper.ngc implementation/system_qspi_flash_wrapper.ngc implementation/system_mcb_ddr2_wrapper.ngc implementation/system_axi_timer_0_wrapper.ngc implementation/system_axi_intc_0_wrapper.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+rm -f implementation/system.bmm
+rm -rf implementation/cache
+rm -f implementation/system.bit
+rm -f implementation/system.ncd
+rm -f implementation/system_bd.bmm 
+rm -f implementation/system_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/system_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp system.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+rm -f _impact.cmd
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS\etc\system.gui
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS\etc\system.gui
+Assigned Driver serial_adder_8_bit 1.00.a for instance serial_adder_8_bit_0
+serial_adder_8_bit_0 has been added to the project
+WARNING:EDK:2137 - Peripheral serial_adder_8_bit_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00001fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x41200000-0x4120ffff) axi_intc_0	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x41c00000-0x41c0ffff) axi_timer_0	axi4lite_0
+  (0x75600000-0x7560ffff) QSPI_FLASH	axi4lite_0
+  (0x75c00000-0x75c0ffff) serial_adder_8_bit_0	axi4lite_0
+  (0xc0000000-0xc7ffffff) MCB_DDR2	axi4_0

@@ -73,7 +73,7 @@ module user_logic
 ); // user_logic
 
 // -- ADD USER PARAMETERS BELOW THIS LINE ------------
-// --USER parameters added here 
+
 // -- ADD USER PARAMETERS ABOVE THIS LINE ------------
 
 // -- DO NOT EDIT BELOW THIS LINE --------------------
@@ -105,7 +105,8 @@ output                                    IP2Bus_Error;
 //----------------------------------------------------------------------------
 
   // --USER nets declarations added here, as needed for user logic
-reg reg_interrupt;
+wire done;
+wire [7:0] sum;
   // Nets for user logic slave model s/w accessible register example
   reg        [C_SLV_DWIDTH-1 : 0]           slv_reg0;
   reg        [C_SLV_DWIDTH-1 : 0]           slv_reg1;
@@ -119,7 +120,9 @@ reg reg_interrupt;
   integer                                   byte_index, bit_index;
 
   // USER logic implementation added here
-
+	SerialAdder adder(slv_reg0[7:0], slv_reg1[7:0], Bus2IP_Clk, Bus2IP_Resetn, slv_reg2[0], sum, done);
+	
+	
   // ------------------------------------------------------
   // Example code to read/write user logic slave model s/w accessible registers
   // 
@@ -156,18 +159,15 @@ reg reg_interrupt;
           slv_reg2 <= 0;
           slv_reg3 <= 0;
         end
-      else
+      else begin
+			if (done == 1'b1) begin 
+				slv_reg4[7:0] <= sum[7:0];
+			end
         case ( slv_reg_write_sel )
           4'b1000 :
             for ( byte_index = 0; byte_index <= (C_SLV_DWIDTH/8)-1; byte_index = byte_index+1 )
-              if ( Bus2IP_BE[byte_index] == 1 ) begin
-					if (byte_index == 0) begin
-								reg_interrupt <= Bus2IP_Data[0];
-							end
-							else begin
-								slv_reg0[(byte_index*8) +: 8] <= Bus2IP_Data[(byte_index*8) +: 8];
-							end
-				  end
+              if ( Bus2IP_BE[byte_index] == 1 )
+					slv_reg0[(byte_index*8) +: 8] <= Bus2IP_Data[(byte_index*8) +: 8];
           4'b0100 :
             for ( byte_index = 0; byte_index <= (C_SLV_DWIDTH/8)-1; byte_index = byte_index+1 )
               if ( Bus2IP_BE[byte_index] == 1 )
@@ -176,18 +176,18 @@ reg reg_interrupt;
             for ( byte_index = 0; byte_index <= (C_SLV_DWIDTH/8)-1; byte_index = byte_index+1 )
               if ( Bus2IP_BE[byte_index] == 1 )
                 slv_reg2[(byte_index*8) +: 8] <= Bus2IP_Data[(byte_index*8) +: 8];
-          4'b0001 :
+          /*4'b0001 :
             for ( byte_index = 0; byte_index <= (C_SLV_DWIDTH/8)-1; byte_index = byte_index+1 )
               if ( Bus2IP_BE[byte_index] == 1 )
-                slv_reg3[(byte_index*8) +: 8] <= Bus2IP_Data[(byte_index*8) +: 8];
+                slv_reg3[(byte_index*8) +: 8] <= Bus2IP_Data[(byte_index*8) +: 8];*/
           default : begin
             slv_reg0 <= slv_reg0;
             slv_reg1 <= slv_reg1;
             slv_reg2 <= slv_reg2;
-            slv_reg3 <= slv_reg3;
+           // slv_reg3 <= slv_reg3;
                     end
         endcase
-
+		end
     end // SLAVE_REG_WRITE_PROC
 
   // implement slave model register read mux
@@ -207,7 +207,7 @@ reg reg_interrupt;
   // ------------------------------------------------------------
   // Example code to drive IP to Bus signals
   // ------------------------------------------------------------
-assign IP2Bus_Interrupt = reg_interrupt;
+assign IP2Bus_Interrupt = done;
 assign IP2Bus_Data = (slv_read_ack == 1'b1) ? slv_ip2bus_data :  0 ;
   assign IP2Bus_WrAck = slv_write_ack;
   assign IP2Bus_RdAck = slv_read_ack;

@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Engin/Desktop/Serial_Adder_8bit/SerialAdder.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Engin/Desktop/bitirme_git/MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/verilog/SerialAdder.v&quot; into library work</arg>
 </msg>
 
 </messages>

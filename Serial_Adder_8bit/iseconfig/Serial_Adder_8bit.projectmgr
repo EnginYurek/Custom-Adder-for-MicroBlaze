@@ -16,13 +16,13 @@
          <ClosedNode>/top_adder C:|Users|Engin|Desktop|Serial_Adder_8bit|top_adder.v/SA - SerialAdder</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>SerialAdder (C:/Users/Engin/Desktop/Serial_Adder_8bit/SerialAdder.v)</SelectedItem>
+         <SelectedItem>SerialAdder (C:/Users/Engin/Desktop/bitirme_git/MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/verilog/SerialAdder.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001c2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001c20000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002ee000000020000000000000000000000000200000064ffffffff000000810000000300000002000002ee0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>SerialAdder (C:/Users/Engin/Desktop/Serial_Adder_8bit/SerialAdder.v)</CurrentItem>
+      <CurrentItem>SerialAdder (C:/Users/Engin/Desktop/bitirme_git/MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/verilog/SerialAdder.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -30,13 +30,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000121000000010000000100000000000000000000000064ffffffff000000810000000000000001000001210000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -47,7 +47,7 @@
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028e000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004b0000000100000000000000280000000100000000000000790000000100000000000001a20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>C:\Users\Engin\Desktop\Serial_Adder_8bit\SerialAdder.v</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -75,13 +75,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>View/Edit Routed Design (FPGA Editor)</SelectedItem>
+         <SelectedItem>Synthesize - XST</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000017b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000017b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>View/Edit Routed Design (FPGA Editor)</CurrentItem>
+      <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>

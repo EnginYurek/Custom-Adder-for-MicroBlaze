@@ -14,3 +14,4 @@
 15:42:08.328 INFO  - Successfully generated C:\Users\Engin\Desktop\bitirme_git\Adder_SDK\Interrupt_test\src\lscript.ld. 
 15:42:08.328 INFO  - Applying linker script to all configurations of project Interrupt_test. 
 15:42:08.328 INFO  - Setting rebuild state to true for all configurations of project Interrupt_test. 
+16:27:06.860 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

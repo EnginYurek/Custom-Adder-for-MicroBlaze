@@ -1,0 +1,2 @@
+verilog work "SerialAdder.v"
+verilog work "../../hdl/verilog/user_logic.v"

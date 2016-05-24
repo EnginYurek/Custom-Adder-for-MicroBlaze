@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-17T12:27:02</DateModified>
+  <DateModified>2016-05-24T17:25:43</DateModified>
   <ModuleName>SerialAdder</ModuleName>
   <SummaryTimeStamp>2016-05-16T21:44:44</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Engin/Desktop/Serial_Adder_8bit/iseconfig/SerialAdder.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Engin/Desktop/Serial_Adder_8bit\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Engin/Desktop/bitirme_git/Serial_Adder_8bit/iseconfig/SerialAdder.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Engin/Desktop/bitirme_git/Serial_Adder_8bit\</ImplementationReportsDirectory>
   <DateInitialized>2016-05-08T17:16:19</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

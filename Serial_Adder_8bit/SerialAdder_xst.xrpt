@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Tue May 17 12:27:32 2016">
+  <application stringID="Xst" timeStamp="Tue May 24 17:27:57 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="E:\Xilinx_EDK\14.7\ISE_DS\ISE\\lib\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\lib\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\..\..\..\DocNav;E:\Xilinx_EDK\14.7\ISE_DS\PlanAhead\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\EDK\lib\nt64;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnuwin\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\arm\nt\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;E:\Xilinx_EDK\14.7\ISE_DS\common\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Intel\MPI-RT\4.0.3.009\em64t\bin;C:\Program Files (x86)\Intel\MPI-RT\4.0.3.009\ia32\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\MATLAB\R2014b\runtime\win64;C:\Program Files\MATLAB\R2014b\bin;C:\Program Files (x86)\Skype\Phone\;C:\Users\Engin\AppData\Local\Programs\EmEditor"/>
+          <item stringID="value" value="E:\Xilinx_EDK\14.7\ISE_DS\ISE\\lib\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\lib\nt64;E:\Xilinx_EDK\14.7\ISE_DS\ISE\..\..\..\DocNav;E:\Xilinx_EDK\14.7\ISE_DS\PlanAhead\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\EDK\lib\nt64;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnuwin\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\arm\nt\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;E:\Xilinx_EDK\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;E:\Xilinx_EDK\14.7\ISE_DS\common\bin\nt64;E:\Xilinx_EDK\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Intel\MPI-RT\4.0.3.009\em64t\bin;C:\Program Files (x86)\Intel\MPI-RT\4.0.3.009\ia32\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\MATLAB\R2014b\runtime\win64;C:\Program Files\MATLAB\R2014b\bin;C:\Program Files (x86)\Skype\Phone\"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -146,9 +146,9 @@
       </section>
       <section stringID="XST_CELL_USAGE">
         <item dataType="int" stringID="XST_BELS" value="110">
-          <item dataType="int" stringID="XST_LUT2" value="4"/>
+          <item dataType="int" stringID="XST_LUT2" value="3"/>
           <item dataType="int" stringID="XST_LUT2L" value="14"/>
-          <item dataType="int" stringID="XST_LUT3" value="3"/>
+          <item dataType="int" stringID="XST_LUT3" value="4"/>
           <item dataType="int" stringID="XST_LUT3D" value="1"/>
           <item dataType="int" stringID="XST_LUT3L" value="22"/>
           <item dataType="int" stringID="XST_LUT4" value="62"/>

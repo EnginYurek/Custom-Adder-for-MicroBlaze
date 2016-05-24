@@ -34,3 +34,5 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-5 SerialAdder
 map -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o SerialAdder_map.ncd SerialAdder.ngd SerialAdder.pcf 
 par -w -intstyle ise -ol high -t 1 SerialAdder_map.ncd SerialAdder.ncd SerialAdder.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SerialAdder.twx SerialAdder.ncd -o SerialAdder.twr SerialAdder.pcf 
+xst -intstyle ise -ifn "C:/Users/Engin/Desktop/bitirme_git/Serial_Adder_8bit/SerialAdder.xst" -ofn "C:/Users/Engin/Desktop/bitirme_git/Serial_Adder_8bit/SerialAdder.syr" 
+xst -intstyle ise -ifn "C:/Users/Engin/Desktop/bitirme_git/Serial_Adder_8bit/SerialAdder.xst" -ofn "C:/Users/Engin/Desktop/bitirme_git/Serial_Adder_8bit/SerialAdder.syr" 
