@@ -1,0 +1,28 @@
+Command line:
+   SerialAdder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49487
+
+Sun May 08 10:44:20 2016
+
+
+ Elaboration Time: 0.296401 sec
+
+ Current Memory Usage: 1162.86 Meg
+
+ Total Signals          : 36
+ Total Nets             : 49
+ Total Signal Drivers   : 15
+ Total Blocks           : 5
+ Total Primitive Blocks : 3
+ Total Processes        : 17
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 167
+
+ Total Simulation Time: 0.296401 sec
+
+ Current Memory Usage: 1162.86 Meg
+
+Sun May 08 10:44:24 2016
+

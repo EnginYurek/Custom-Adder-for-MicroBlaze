@@ -1,0 +1,3 @@
+verilog isim_temp "aritmetik_devreler.v"
+verilog isim_temp "SerialAdder.v"
+verilog isim_temp "E:/Xilinx_EDK/14.7/ISE_DS/ISE//verilog/src/glbl.v"

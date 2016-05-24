@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/Engin/Desktop/Serial_Adder_8bit/top_adder.xst" -ofn "C:/Users/Engin/Desktop/Serial_Adder_8bit/top_adder.syr" 
+xst -intstyle ise -ifn "C:/Users/Engin/Desktop/Serial_Adder_8bit/top_adder.xst" -ofn "C:/Users/Engin/Desktop/Serial_Adder_8bit/top_adder.syr" 
+xst -intstyle ise -ifn "C:/Users/Engin/Desktop/Serial_Adder_8bit/top_adder.xst" -ofn "C:/Users/Engin/Desktop/Serial_Adder_8bit/top_adder.syr" 

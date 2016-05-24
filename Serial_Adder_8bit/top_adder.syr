@@ -1,0 +1,631 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: top_adder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_adder.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_adder"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-vq100
+
+---- Source Options
+Top Module Name                    : top_adder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "aritmetik_devreler.v" in library work
+Module <HA> compiled
+Compiling verilog file "SerialAdder.v" in library work
+Module <FA> compiled
+Compiling verilog file "top_adder.v" in library work
+Module <SerialAdder> compiled
+Module <top_adder> compiled
+No errors in compilation
+Analysis of file <"top_adder.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top_adder> in library <work>.
+
+Analyzing hierarchy for module <SerialAdder> in library <work>.
+
+Analyzing hierarchy for module <FA> in library <work>.
+
+Analyzing hierarchy for module <HA> in library <work>.
+
+Analyzing hierarchy for module <HA> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top_adder>.
+Module <top_adder> is correct for synthesis.
+ 
+Analyzing module <SerialAdder> in library <work>.
+Module <SerialAdder> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  1" for signal <Wcarry>.
+    Set user-defined property "KEEP =  1" for signal <Wsum>.
+    Set user-defined property "KEEP =  1" for signal <aHold>.
+    Set user-defined property "KEEP =  1" for signal <carryHold>.
+    Set user-defined property "KEEP =  1" for signal <bHold>.
+    Set user-defined property "KEEP =  1" for signal <cHold>.
+Analyzing module <FA> in library <work>.
+Module <FA> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  1" for instance <hadder_1> in unit <FA>.
+Analyzing module <HA.1> in library <work>.
+Module <HA.1> is correct for synthesis.
+ 
+Analyzing module <HA.2> in library <work>.
+Module <HA.2> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <HA_1>.
+    Related source file is "aritmetik_devreler.v".
+    Found 1-bit xor2 for signal <s>.
+Unit <HA_1> synthesized.
+
+
+Synthesizing Unit <HA_2>.
+    Related source file is "aritmetik_devreler.v".
+    Found 1-bit xor2 for signal <s>.
+Unit <HA_2> synthesized.
+
+
+Synthesizing Unit <FA>.
+    Related source file is "aritmetik_devreler.v".
+Unit <FA> synthesized.
+
+
+Synthesizing Unit <SerialAdder>.
+    Related source file is "SerialAdder.v".
+    Using one-hot encoding for signal <$old_state_2>.
+    Using one-hot encoding for signal <$old_state_8>.
+    Found 8-bit register for signal <aHold>.
+    Found 8-bit register for signal <bHold>.
+    Found 1-bit register for signal <carryHold>.
+    Found 8-bit register for signal <cHold>.
+    Found 1-bit register for signal <d>.
+    Found 8-bit register for signal <out>.
+    Found 10-bit register for signal <state>.
+    Summary:
+	inferred  44 D-type flip-flop(s).
+Unit <SerialAdder> synthesized.
+
+
+Synthesizing Unit <top_adder>.
+    Related source file is "top_adder.v".
+WARNING:Xst:647 - Input <a> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <sum<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <slv_reg1<31:8>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <slv_reg1<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <slv_reg0<31:17>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <slv_reg0<16:0>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000.
+Unit <top_adder> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 10-bit register                                       : 1
+ 8-bit register                                        : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top_adder> ...
+
+Optimizing unit <HA_1> ...
+
+Optimizing unit <SerialAdder> ...
+WARNING:Xst:1293 - FF/Latch <carryHold> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_9> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_8> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_7> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_6> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_5> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_4> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_3> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_2> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_1> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_0> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<0> bHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<0> cHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and carryHold carryHold signal will be lost.
+WARNING:Xst:1293 - FF/Latch <cHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <state_0> of sequential type is unconnected in block <SerialAdder>.
+INFO:Xst:2261 - The FF/Latch <aHold_1> in Unit <SerialAdder> is equivalent to the following 20 FFs/Latches, which will be removed : <aHold_2> <aHold_3> <aHold_4> <aHold_5> <aHold_6> <aHold_7> <bHold_1> <bHold_2> <bHold_3> <bHold_4> <bHold_5> <bHold_6> <bHold_7> <cHold_1> <cHold_2> <cHold_3> <cHold_4> <cHold_5> <cHold_6> <cHold_7> 
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<2> aHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<3> aHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<4> aHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<5> aHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<6> aHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<7> aHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<1> bHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<2> bHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<3> bHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<4> bHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<5> bHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<6> bHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<7> bHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<1> cHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<2> cHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<3> cHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<4> cHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<5> cHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<6> cHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<7> cHold<7> signal will be lost.
+WARNING:Xst:1293 - FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <carryHold> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_9> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_8> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_7> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_6> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_5> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_4> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_3> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_2> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_1> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_0> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<0> bHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<0> cHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and carryHold carryHold signal will be lost.
+WARNING:Xst:1293 - FF/Latch <cHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <state_0> of sequential type is unconnected in block <SerialAdder>.
+INFO:Xst:2261 - The FF/Latch <aHold_1> in Unit <SerialAdder> is equivalent to the following 20 FFs/Latches, which will be removed : <aHold_2> <aHold_3> <aHold_4> <aHold_5> <aHold_6> <aHold_7> <bHold_1> <bHold_2> <bHold_3> <bHold_4> <bHold_5> <bHold_6> <bHold_7> <cHold_1> <cHold_2> <cHold_3> <cHold_4> <cHold_5> <cHold_6> <cHold_7> 
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<2> aHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<3> aHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<4> aHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<5> aHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<6> aHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and aHold<7> aHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<1> bHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<2> bHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<3> bHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<4> bHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<5> bHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<6> bHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and bHold<7> bHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<1> cHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<2> cHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<3> cHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<4> cHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<5> cHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<6> cHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<1> and cHold<7> cHold<7> signal will be lost.
+WARNING:Xst:1293 - FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_0> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_1> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_2> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_3> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_4> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_5> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_6> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_7> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_0> has a constant value of 1 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_8> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_9> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <carryHold> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<1> aHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<2> aHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<3> aHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<4> aHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<5> aHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<6> aHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<7> aHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<0> bHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<1> bHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<2> bHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<3> bHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<4> bHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<5> bHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<6> bHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<7> bHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<0> cHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<1> cHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<2> cHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<3> cHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<4> cHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<5> cHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<6> cHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<7> cHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and carryHold carryHold signal will be lost.
+WARNING:Xst:1293 - FF/Latch <cHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_0> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_1> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_2> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_3> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_4> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_5> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_6> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_7> (without init value) has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_0> has a constant value of 1 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_8> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_9> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <carryHold> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <aHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_6> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bHold_7> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_0> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_2> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_3> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_4> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cHold_5> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<1> aHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<2> aHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<3> aHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<4> aHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<5> aHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<6> aHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and aHold<7> aHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<0> bHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<1> bHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<2> bHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<3> bHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<4> bHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<5> bHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<6> bHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and bHold<7> bHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<0> cHold<0> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<1> cHold<1> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<2> cHold<2> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<3> cHold<3> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<4> cHold<4> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<5> cHold<5> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<6> cHold<6> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and cHold<7> cHold<7> signal will be lost.
+WARNING:Xst:638 - in unit SerialAdder Conflict on KEEP property on signal aHold<0> and carryHold carryHold signal will be lost.
+WARNING:Xst:1293 - FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <aHold_1> has a constant value of 0 in block <SerialAdder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SA/aHold_1> has a constant value of 0 in block <top_adder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SA/aHold_1> has a constant value of 0 in block <top_adder>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <SA/aHold_1> has a constant value of 0 in block <top_adder>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_adder, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_adder.ngr
+Top Level Output File Name         : top_adder
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 67
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 2
+# IO Buffers                       : 1
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100evq100-5 
+
+ Number of Slices:                        0  out of    960     0%  
+ Number of IOs:                          67
+ Number of bonded IOBs:                   1  out of     66     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.98 secs
+ 
+--> 
+
+Total memory usage is 257496 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  287 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

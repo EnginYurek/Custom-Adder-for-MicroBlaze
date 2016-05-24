@@ -1,0 +1,3 @@
+verilog work "aritmetik_devreler.v"
+verilog work "SBA.v"
+verilog work "SBA_test.v"

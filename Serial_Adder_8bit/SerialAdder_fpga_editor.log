@@ -1,0 +1,167 @@
+#:C69    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Users\Engin\Desktop\Serial_Adder_8bit
+#Date/Time:
+#:T   Tue May 17 12:29:16 2016
+#------------------------------
+	#Reading SerialAdder.ncd...
+	#Loading device for application Rf_Device from file '3s100e.nph' in environment E:\Xilinx_EDK\14.7\ISE_DS\ISE\.
+	#   "SerialAdder" is an NCD, version 3.2, device xc3s100e, package vq100, speed -5
+	#Design creation date: 2016.05.17.09.28.23
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+setattr main disable_draw on
+	#3
+setattr layer long_lines view on
+	#4
+setattr main disable_draw off
+	#Hint: change the visibility of more than one layer at a time by clicking on the apply button, clicking two or more layer buttons, and then clicking on the apply button again.
+	#5
+setattr main disable_draw on
+	#6
+setattr layer long_lines view off
+	#7
+setattr main disable_draw off
+	#8
+setattr main disable_draw on
+	#9
+setattr layer local_lines view on
+	#10
+setattr main disable_draw off
+	#11
+setattr main disable_draw on
+	#12
+setattr layer local_lines view off
+	#13
+setattr main disable_draw off
+	#14
+setattr main disable_draw on
+	#15
+setattr layer pinwires view on
+	#16
+setattr main disable_draw off
+	#17
+setattr main disable_draw on
+	#18
+setattr layer pinwires view off
+	#19
+setattr main disable_draw off
+	#20
+setattr main disable_draw on
+	#21
+setattr layer pips view on
+	#22
+setattr main disable_draw off
+	#23
+setattr main disable_draw on
+	#24
+setattr layer pips view off
+	#25
+setattr main disable_draw off
+	#26
+setattr main disable_draw on
+	#27
+setattr layer switch_boxes view on
+	#28
+setattr main disable_draw off
+	#29
+select -k comp 'a<0>'
+	#30
+unselect -all
+	#31
+select comp 'a<0>'
+	#comp "a<0>",  site "P49",  bonded type = IBUF,  pad name = PAD56,  pin name = P49  (RPM grid X67Y0)
+	#32
+unselect -all
+	#33
+select comp 'a<0>'
+	#comp "a<0>",  site "P49",  bonded type = IBUF,  pad name = PAD56,  pin name = P49  (RPM grid X67Y0)
+	#34
+post block
+	#35
+unselect -all
+	#36
+select comp 'a<1>'
+	#comp "a<1>",  site "P50",  bonded type = IBUF,  pad name = PAD55,  pin name = P50  (RPM grid X67Y1)
+	#37
+post block
+	#38
+unselect comp 'a<1>'
+	#39
+select -k comp 'aHold<0>'
+	#40
+setattr main disable_draw on
+	#41
+setattr layer local_lines view off
+	#42
+setattr main disable_draw off
+	#43
+setattr main disable_draw on
+	#44
+setattr layer long_lines view off
+	#45
+setattr main disable_draw off
+	#46
+unselect -all
+	#47
+unselect -all
+	#48
+unselect -all
+	#49
+unselect -all
+	#50
+unselect -all
+	#51
+unselect -all
+	#52
+unselect -all
+	#53
+select site 'VCC_X18Y1'
+	#site "VCC_X18Y1",  type = VCC  (RPM grid X-1Y-1)
+	#54
+unselect -all
+	#55
+select site 'VCC_X18Y1'
+	#site "VCC_X18Y1",  type = VCC  (RPM grid X-1Y-1)
+	#56
+post block
+	#57
+unselect -all
+	#58
+select comp 'a<1>'
+	#comp "a<1>",  site "P50",  bonded type = IBUF,  pad name = PAD55,  pin name = P50  (RPM grid X67Y1)
+	#59
+post block
+	#60
+unselect -all
+	#61
+select comp 'a<0>'
+	#comp "a<0>",  site "P49",  bonded type = IBUF,  pad name = PAD56,  pin name = P49  (RPM grid X67Y0)
+	#62
+post block
+	#63
+unselect comp 'a<0>'
+	#64
+select -k comp 'a<5>'
+	#65
+unselect comp 'a<5>'
+	#66
+select -k comp 'aHold_mux0000<5>0'
+	#67
+unselect -all
+	#68
+select comp 'aHold_mux0000<5>0'
+	#comp "aHold_mux0000<5>0",  site "SLICE_X19Y9",  type = SLICEL  (RPM grid X43Y11)
+	#69
+unselect -all
+	#70
+select comp 'aHold_mux0000<5>0'
+	#comp "aHold_mux0000<5>0",  site "SLICE_X19Y9",  type = SLICEL  (RPM grid X43Y11)
+	#71
+post block

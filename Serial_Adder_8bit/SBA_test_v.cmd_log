@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/engin/Desktop/Serial_Adder_8bit/SBA_test_v.xst" -ofn "/home/engin/Desktop/Serial_Adder_8bit/SBA_test_v.syr" 
+xst -intstyle ise -ifn "/home/engin/Desktop/Serial_Adder_8bit/SBA_test_v.xst" -ofn "/home/engin/Desktop/Serial_Adder_8bit/SBA_test_v.syr" 

@@ -1,0 +1,3 @@
+verilog work "aritmetik_devreler.v"
+verilog work "SerialAdder.v"
+verilog work "top_adder.v"

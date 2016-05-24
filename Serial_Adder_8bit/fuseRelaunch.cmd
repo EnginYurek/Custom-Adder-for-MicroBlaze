@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Engin/Desktop/Serial_Adder_8bit/SerialAdder_Test_isim_beh.exe" -prj "C:/Users/Engin/Desktop/Serial_Adder_8bit/SerialAdder_Test_beh.prj" "work.SerialAdder_Test" "work.glbl" 
