@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Users\Engin\Desktop\bitirme_git\XPS_project\pcores\serial_adder_8_bit_v1_00_a\devl\synthesis\serial_adder_8_bit_xst.prj"
+-top serial_adder_8_bit
+-p virtex6
+-ofn "C:\Users\Engin\Desktop\bitirme_git\XPS_project\pcores\serial_adder_8_bit_v1_00_a\devl\synthesis\serial_adder_8_bit_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib serial_adder_8_bit_v1_00_a

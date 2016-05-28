@@ -1,0 +1,6 @@
+20:04:00 **** Auto Build of project serial_Adder_bsp ****
+make -k all 
+'Finished building libraries'
+
+20:04:01 Build Finished (took 1s.160ms)
+

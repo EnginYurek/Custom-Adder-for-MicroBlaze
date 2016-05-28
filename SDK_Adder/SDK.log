@@ -1,0 +1,9 @@
+19:53:43.976 INFO  - Processing command line option -hwspec C:\Users\Engin\Desktop\bitirme_git\XPS_project\SDK\SDK_Export\hw\system.xml. 
+19:54:29.195 INFO  - Saving repository preferences. 
+19:54:29.205 INFO  - Reading in cores from local repositories: 
+		 C:\Users\Engin\Desktop\bitirme_git\XPS_project 
+19:54:29.365 INFO  - Updating libgen.options on all BSP projects. 
+19:54:29.365 INFO  - Cleaning BSP projects in the workspace. 
+20:03:59.469 INFO  - FPGA configured successfully with bitstream "C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/XPS_project_hw_platform/download.bit" 
+20:05:27.897 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+00:44:44.858 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

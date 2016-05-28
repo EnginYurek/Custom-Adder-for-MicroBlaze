@@ -1,0 +1,11 @@
+-batch 
+-create serial_adder_8_bit 
+-ver 1.00.a 
+-dir "C:\Users\Engin\Desktop\bitirme_git\XPS_project" 
+-lang verilog 
+-bus axi4lite s 
+-reg 4 
+-xps 
+-ise 
+-bfmsim all
+-driver 

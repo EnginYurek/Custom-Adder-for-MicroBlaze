@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          C:\Users\Engin\Desktop\bitirme_git\XPS_project/drivers/serial_adder_8_bit_v1_00_a/data/serial_adder_8_bit_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Tue May 24 18:03:40 2016 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER serial_adder_8_bit
+
+  OPTION supported_peripherals = (serial_adder_8_bit);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER
