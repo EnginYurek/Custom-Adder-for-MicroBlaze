@@ -21,10 +21,10 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 164564 kilobytes
+Total memory usage is 164948 kilobytes
 
 Writing NGC file "../system_qspi_flash_wrapper.ngc" ...
-Total REAL time to NGCBUILD completion:  8 sec
-Total CPU time to NGCBUILD completion:   8 sec
+Total REAL time to NGCBUILD completion:  6 sec
+Total CPU time to NGCBUILD completion:   6 sec
 
 Writing NGCBUILD log file "../system_qspi_flash_wrapper.blc"...

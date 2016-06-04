@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
-<window height="738" maximized="true" width="1024" x="125" y="0">
+<window height="738" maximized="true" width="1024" x="230" y="-8">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -26,7 +26,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1464108813046" focus="true" label="Workspace - C/C++">
+<page aggregateWorkingSetId="Aggregate for window 1465025733557" focus="true" label="Workspace - C/C++">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -36,6 +36,8 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -43,16 +45,24 @@
 <editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/XPS_project_hw_platform/system.xml" title="system.xml" tooltip="XPS_project_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/XPS_project_hw_platform/system.xml"/>
 </editor>
-<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/serial_Adder_bsp/system.mss" title="system.mss" tooltip="serial_Adder_bsp/system.mss" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/serial_Adder_bsp/system.mss"/>
+<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/standalone_bsp_0/system.mss" title="system.mss" tooltip="standalone_bsp_0/system.mss" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/system.mss"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="serial_adder_8_bit_selftest.c" partName="serial_adder_8_bit_selftest.c" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/serial_Adder_bsp/microblaze_0/libsrc/serial_adder_8_bit_v1_00_a/src/serial_adder_8_bit_selftest.c" title="serial_adder_8_bit_selftest.c" tooltip="serial_Adder_bsp/microblaze_0/libsrc/serial_adder_8_bit_v1_00_a/src/serial_adder_8_bit_selftest.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/serial_Adder_bsp/microblaze_0/libsrc/serial_adder_8_bit_v1_00_a/src/serial_adder_8_bit_selftest.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="897" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="serial_adder_8_bit.h" partName="serial_adder_8_bit.h" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/standalone_bsp_0/microblaze_0/include/serial_adder_8_bit.h" title="serial_adder_8_bit.h" tooltip="standalone_bsp_0/microblaze_0/include/serial_adder_8_bit.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/include/serial_adder_8_bit.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4905" selectionTopPixel="1200"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="adder.c" partName="adder.c" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/Serial_Adder/src/adder.c" title="adder.c" tooltip="Serial_Adder/src/adder.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Serial_Adder/src/adder.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3681" selectionTopPixel="1926"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xil_io.h" partName="xil_io.h" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/standalone_bsp_0/microblaze_0/include/xil_io.h" title="xil_io.h" tooltip="standalone_bsp_0/microblaze_0/include/xil_io.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/include/xil_io.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5561" selectionTopPixel="1747"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xbasic_types.h" partName="xbasic_types.h" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/standalone_bsp_0/microblaze_0/include/xbasic_types.h" title="xbasic_types.h" tooltip="standalone_bsp_0/microblaze_0/include/xbasic_types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/include/xbasic_types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="3742" selectionTopPixel="1185"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/Engin/Desktop/bitirme_git/SDK_Adder/serial_adder/src/helloworld.c" title="helloworld.c" tooltip="serial_adder/src/helloworld.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/serial_adder/src/helloworld.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2940" selectionTopPixel="1157"/>
 </editor>
 </editors>
 <views>
@@ -65,7 +75,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -83,7 +93,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -153,7 +163,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@464cdac8" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d87b360" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
@@ -161,8 +171,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.40922767" ratioLeft="408" ratioRight="589" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.7381757" ratioLeft="437" ratioRight="155" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.7487844" ratioLeft="462" ratioRight="155" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -196,20 +206,77 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/XPS_project_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/serial_Adder_bsp/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/serial_Adder_bsp/microblaze_0/libsrc/serial_adder_8_bit_v1_00_a/src/serial_adder_8_bit_selftest.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Serial_Adder/src/adder.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/standalone_bsp_0/system.mss"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/serial_adder/src/helloworld.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/serial_adder_8_bit.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/xil_io.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/xbasic_types.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/libsrc/standalone_v3_11_a/src/xil_types.h"/>
 </editors>
 <item historyLabel="system.xml" index="0"/>
 <item historyLabel="system.mss" index="1"/>
-<item historyLabel="serial_adder_8_bit_selftest.c" index="2">
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="serial_adder_8_bit.h" index="3">
+<position info="not_deleted" x="4838" y="57"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3677" y="0"/>
+</item>
+<item historyLabel="serial_adder_8_bit.h" index="3">
+<position info="not_deleted" x="4905" y="0"/>
+</item>
+<item historyLabel="xil_io.h" index="4">
+<position info="not_deleted" x="5561" y="0"/>
+</item>
+<item historyLabel="xbasic_types.h" index="5">
+<position info="not_deleted" x="4210" y="3"/>
+</item>
+<item historyLabel="xbasic_types.h" index="5">
+<position info="not_deleted" x="4199" y="0"/>
+</item>
+<item historyLabel="xbasic_types.h" index="5">
+<position info="not_deleted" x="3742" y="7"/>
+</item>
+<item historyLabel="xil_io.h" index="4">
+<position info="not_deleted" x="5561" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3651" y="0"/>
+</item>
+<item historyLabel="xil_types.h" index="6">
+<position info="not_deleted" x="3516" y="3"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3651" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3801" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3783" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3767" y="1"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3802" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="3768" y="0"/>
+</item>
+<item historyLabel="xil_types.h" index="6">
+<position info="not_deleted" x="3521" y="0"/>
+</item>
+<item historyLabel="xil_io.h" index="4">
+<position info="not_deleted" x="5561" y="0"/>
+</item>
+<item historyLabel="serial_adder_8_bit.h" index="3">
+<position info="not_deleted" x="4905" y="0"/>
+</item>
+<item active="true" historyLabel="helloworld.c" index="2">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="serial_adder_8_bit_selftest.c" index="2">
-<position info="not_deleted" x="897" y="0"/>
-</item>
-<item active="true" historyLabel="adder.c" index="3">
-<position info="not_deleted" x="3731" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -228,14 +295,23 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="adder.c" tooltip="Serial_Adder/src/adder.c">
-<persistable path="/Serial_Adder/src/adder.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="serial_adder/src/helloworld.c">
+<persistable path="/serial_adder/src/helloworld.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="serial_adder_8_bit_selftest.c" tooltip="serial_Adder_bsp/microblaze_0/libsrc/serial_adder_8_bit_v1_00_a/src/serial_adder_8_bit_selftest.c">
-<persistable path="/serial_Adder_bsp/microblaze_0/libsrc/serial_adder_8_bit_v1_00_a/src/serial_adder_8_bit_selftest.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xil_types.h" tooltip="standalone_bsp_0/microblaze_0/libsrc/standalone_v3_11_a/src/xil_types.h">
+<persistable path="/standalone_bsp_0/microblaze_0/libsrc/standalone_v3_11_a/src/xil_types.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="serial_Adder_bsp/system.mss">
-<persistable path="/serial_Adder_bsp/system.mss"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xbasic_types.h" tooltip="standalone_bsp_0/microblaze_0/include/xbasic_types.h">
+<persistable path="/standalone_bsp_0/microblaze_0/include/xbasic_types.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xil_io.h" tooltip="standalone_bsp_0/microblaze_0/include/xil_io.h">
+<persistable path="/standalone_bsp_0/microblaze_0/include/xil_io.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="serial_adder_8_bit.h" tooltip="standalone_bsp_0/microblaze_0/include/serial_adder_8_bit.h">
+<persistable path="/standalone_bsp_0/microblaze_0/include/serial_adder_8_bit.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="standalone_bsp_0/system.mss">
+<persistable path="/standalone_bsp_0/system.mss"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="XPS_project_hw_platform/system.xml">
 <persistable path="/XPS_project_hw_platform/system.xml"/>

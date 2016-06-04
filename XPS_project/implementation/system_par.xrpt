@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Tue May 24 19:48:55 2016">
+  <application stringID="par" timeStamp="Sat Jun 04 10:27:05 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -57,12 +57,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="1 mins 34 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="2 mins 18 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="1 mins 33 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="1 mins 41 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="1 mins 39 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="2 mins 28 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="1 mins 41 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -2532,7 +2532,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Tue May 24 19:48:56 2016">
+  <application stringID="Par" timeStamp="Sat Jun 04 10:27:06 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>

@@ -1,0 +1,13 @@
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.bss=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.data=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.rodata=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.sbss=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.sbss2=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.sdata=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.sdata2=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:.text=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:Heap=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:Heap-size=1024
+com.xilinx.sdk.linkgen.prefs.serial_adder\:Stack=mcb_ddr2_S0_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.serial_adder\:Stack-size=1024
+eclipse.preferences.version=1

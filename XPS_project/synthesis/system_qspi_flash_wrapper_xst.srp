@@ -3,8 +3,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\Users\Engin\Desktop\bitirme_git\XPS_project\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.61 secs
  
 --> 
 TABLE OF CONTENTS
@@ -1776,7 +1776,6 @@ Moving files to output directory...
 Finished moving files to output directory
 Successfully generated unit 'system_qspi_flash_wrapper_fifo_generator_v9_3'.
 
-End of process call...
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
@@ -2288,12 +2287,12 @@ S_AXI_ACLK     |    4.557|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 251.00 secs
-Total CPU time to Xst completion: 250.78 secs
+Total REAL time to Xst completion: 410.00 secs
+Total CPU time to Xst completion: 410.29 secs
  
 --> 
 
-Total memory usage is 301764 kilobytes
+Total memory usage is 301956 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  173 (   0 filtered)

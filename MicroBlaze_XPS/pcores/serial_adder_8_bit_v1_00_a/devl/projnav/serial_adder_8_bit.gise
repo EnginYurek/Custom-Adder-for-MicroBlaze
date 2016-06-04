@@ -73,15 +73,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1464082344" xil_pn:in_ck="-4842776256850362798" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-1216184912159091512" xil_pn:start_ts="1464082320">
+    <transform xil_pn:end_ts="1465023022" xil_pn:in_ck="-4842776256850362798" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-1216184912159091512" xil_pn:start_ts="1465022957">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="serial_adder_8_bit.lso"/>
       <outfile xil_pn:name="serial_adder_8_bit.ngc"/>

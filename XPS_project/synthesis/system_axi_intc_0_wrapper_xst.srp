@@ -3,8 +3,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\Users\Engin\Desktop\bitirme_git\XPS_project\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.45 secs
  
 --> 
 TABLE OF CONTENTS
@@ -1165,12 +1165,12 @@ S_AXI_ACLK     |    3.973|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.81 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.83 secs
  
 --> 
 
-Total memory usage is 268292 kilobytes
+Total memory usage is 291204 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   28 (   0 filtered)

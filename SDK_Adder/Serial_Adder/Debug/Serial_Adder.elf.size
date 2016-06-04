@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-   7798	    324	   2244	  10366	   287e	Serial_Adder.elf
+  53420	   1488	   2308	  57216	   df80	serial_adder.elf

@@ -3,8 +3,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\Users\Engin\Desktop\bitirme_git\XPS_project\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> 
 TABLE OF CONTENTS
@@ -1725,8 +1725,8 @@ debug_module/debug_module/drck_i|    2.427|    3.477|    3.249|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 35.44 secs
+Total REAL time to Xst completion: 59.00 secs
+Total CPU time to Xst completion: 58.22 secs
  
 --> 
 

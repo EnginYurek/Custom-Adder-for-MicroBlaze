@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Serial_Adder/src/helloworld.c&apos; to &apos;adder&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="adder" stamp="1464109081044" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Serial_Adder/src/adder&apos; to &apos;adder.c&apos;" description="Rename resource &apos;adder&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/adder" name="adder.c" stamp="1464109091577" updateReferences="true"/>
-</session>

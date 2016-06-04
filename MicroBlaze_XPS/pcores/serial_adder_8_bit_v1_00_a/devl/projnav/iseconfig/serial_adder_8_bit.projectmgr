@@ -7,8 +7,10 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/SerialAdder C:|Users|Engin|Desktop|bitirme_git|MicroBlaze_XPS|pcores|serial_adder_8_bit_v1_00_a|devl|projnav|SerialAdder.v</ClosedNode>
          <ClosedNode>/Unassigned User Library Modules</ClosedNode>
          <ClosedNode>/serial_adder_8_bit - IMP C:|Users|Engin|Desktop|bitirme_git|MicroBlaze_XPS|pcores|serial_adder_8_bit_v1_00_a|hdl|vhdl|serial_adder_8_bit.vhd/AXI_LITE_IPIF_I - axi_lite_ipif - imp</ClosedNode>
+         <ClosedNode>/serial_adder_8_bit - IMP C:|Users|Engin|Desktop|bitirme_git|MicroBlaze_XPS|pcores|serial_adder_8_bit_v1_00_a|hdl|vhdl|serial_adder_8_bit.vhd/USER_LOGIC_I - user_logic</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>serial_adder_8_bit - IMP (C:/Users/Engin/Desktop/bitirme_git/MicroBlaze_XPS/pcores/serial_adder_8_bit_v1_00_a/hdl/vhdl/serial_adder_8_bit.vhd)</SelectedItem>
@@ -33,7 +35,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
@@ -46,7 +48,7 @@
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000389000000040101000100000000000000000000000064ffffffff0000008100000000000000040000026100000001000000000000004a0000000100000000000000660000000100000000000000780000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>C:\Users\Engin\Desktop\bitirme_git\MicroBlaze_XPS\pcores\serial_adder_8_bit_v1_00_a\hdl\verilog\user_logic.v</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -78,4 +80,18 @@
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
 </Project>

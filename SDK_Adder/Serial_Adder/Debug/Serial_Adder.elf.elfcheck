@@ -3,7 +3,7 @@ Xilinx EDK 14.7 Build EDK_P.20131013
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: elfcheck -hw ../../XPS_project_hw_platform/system.xml -pe
-microblaze_0 Serial_Adder.elf 
+microblaze_0 serial_adder.elf 
 
-ELF file	: Serial_Adder.elf
+ELF file	: serial_adder.elf
 elfcheck passed.

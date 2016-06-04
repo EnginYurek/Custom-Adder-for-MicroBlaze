@@ -8,7 +8,7 @@ E:\Xilinx_EDK\14.7\ISE_DS\ISE\;E:\Xilinx_EDK\14.7\ISE_DS\EDK.
    "system" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
 Opened constraints file system.pcf.
 
-Tue May 24 19:51:21 2016
+Sat Jun 04 10:30:43 2016
 
 E:\Xilinx_EDK\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w -g TdoPin:PULLNONE -g StartUpClk:JTAGCLK system.ncd 
 
